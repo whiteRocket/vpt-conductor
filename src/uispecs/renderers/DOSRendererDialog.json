@@ -1,0 +1,161 @@
+// #package uispecs
+
+// #section DOSRendererDialog
+
+{
+  "type": "panel",
+  "children": [
+    {
+      "type": "field",
+      "label": "Steps:",
+      "children": [
+        {
+          "type": "spinner",
+          "bind": "steps",
+          "value": 200,
+          "min": 1
+        }
+      ]
+    },
+    {
+      "type": "field",
+      "label": "Slices:",
+      "children": [
+        {
+          "type": "spinner",
+          "bind": "slices",
+          "value": 200,
+          "min": 1
+        }
+      ]
+    },
+    {
+      "type": "field",
+      "label": "Occlusion scale:",
+      "children": [
+        {
+          "type": "spinner",
+          "bind": "occlusionScale",
+          "value": 0.01,
+          "min": 0,
+          "max": 0.1
+        }
+      ]
+    },
+    {
+      "type": "field",
+      "label": "Occlusion decay:",
+      "children": [
+        {
+          "type": "spinner",
+          "bind": "occlusionDecay",
+          "value": 0.9,
+          "min": 0,
+          "max": 1
+        }
+      ]
+    },
+    {
+      "type": "field",
+      "label": "Color bias:",
+      "children": [
+        {
+          "type": "slider",
+          "bind": "colorBias",
+          "value": 0,
+          "min": 0,
+          "max": 1
+        }
+      ]
+    },
+    {
+      "type": "field",
+      "label": "Alpha bias:",
+      "children": [
+        {
+          "type": "slider",
+          "bind": "alphaBias",
+          "value": 0,
+          "min": 0,
+          "max": 1
+        }
+      ]
+    },
+    {
+      "type": "field",
+      "label": "Alpha transfer:",
+      "children": [
+        {
+          "type": "slider",
+          "bind": "alphaTransfer",
+          "value": 0,
+          "min": 0,
+          "max": 1
+        }
+      ]
+    },
+    {
+      "type": "field",
+      "label": "Cut depth:",
+      "children": [
+        {
+          "type": "slider",
+          "bind": "cutDepth",
+          "value": 0,
+          "min": 0,
+          "max": 1
+        }
+      ]
+    },
+    {
+      "type": "accordion",
+      "label": "Transfer function",
+      "children": [
+        {
+          "type": "panel",
+          "bind": "tfContainer"
+        }
+      ]
+    },
+
+        {
+          "type": "accordion",
+          "label": "Gizmos",
+          "children": [
+            {
+              "type": "field",
+              "label": "Show BB:",
+              "children": [
+                {
+                  "type": "checkbox",
+                  "bind": "showBoundingBox",
+                  "checked": false
+                }
+              ]
+            },
+            {
+              "type": "field",
+              "label": "Color:",
+              "children": [
+                {
+                  "type": "color-chooser",
+                  "bind": "boundingBoxColor",
+                  "value": "#ff0000"
+                }
+              ]
+            },
+            {
+              "type": "field",
+              "label": "Show Axes:",
+              "children": [
+                {
+                  "type": "checkbox",
+                  "bind": "showAxes",
+                  "checked": true
+                }
+              ]
+            }
+          ]
+        }
+  ]
+}
